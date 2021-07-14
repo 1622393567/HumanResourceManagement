@@ -1,94 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<HRM:project xmlns:HRM="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:HRM="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <HRM:modelVersion>4.0.0</HRM:modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-  <HRM:groupId>org.example</HRM:groupId>
-  <HRM:artifactId>HumanResourceManagement</HRM:artifactId>
-  <HRM:version>1.0</HRM:version>
-  <HRM:packaging>war</HRM:packaging>
+  <groupId>org.example</groupId>
+  <artifactId>HumanResourceManagement</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
 
-  <HRM:name>HumanResourceManagement Maven Webapp</HRM:name>
+  <name>HumanResourceManagement Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
-  <HRM:url>http://www.example.com</HRM:url>
+  <url>http://www.example.com</url>
 
-  <HRM:properties>
-    <HRM:project.build.sourceEncoding>UTF-8</HRM:project.build.sourceEncoding>
-    <HRM:maven.compiler.source>1.7</HRM:maven.compiler.source>
-    <HRM:maven.compiler.target>1.7</HRM:maven.compiler.target>
-  </HRM:properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <relativePath/>
+  </properties>
 
-  <HRM:dependencies>
+  <dependencies>
     <!-- servlet依赖的jar包start -->
-    <HRM:dependency>
-      <HRM:groupId>javax.servlet</HRM:groupId>
-      <HRM:artifactId>javax.servlet-api</HRM:artifactId>
-      <HRM:version>3.1.0</HRM:version>
-    </HRM:dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
     <!-- servlet依赖的jar包start -->
     <!-- jsp依赖jar包start -->
-    <HRM:dependency>
-      <HRM:groupId>javax.servlet.jsp</HRM:groupId>
-      <HRM:artifactId>javax.servlet.jsp-api</HRM:artifactId>
-      <HRM:version>2.3.1</HRM:version>
-    </HRM:dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.1</version>
+    </dependency>
     <!-- jsp依赖jar包end -->
     <!--jstl标签依赖的jar包start -->
-    <HRM:dependency>
-      <HRM:groupId>javax.servlet</HRM:groupId>
-      <HRM:artifactId>jstl</HRM:artifactId>
-      <HRM:version>1.2</HRM:version>
-    </HRM:dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
     <!--jstl标签依赖的jar包end -->
     <!--gson依赖包-->
-    <HRM:dependency>
-      <HRM:groupId>com.google.code.gson</HRM:groupId>
-      <HRM:artifactId>gson</HRM:artifactId>
-      <HRM:version>2.8.2</HRM:version>
-    </HRM:dependency>
-    <HRM:dependency>
-      <HRM:groupId>junit</HRM:groupId>
-      <HRM:artifactId>junit</HRM:artifactId>
-      <HRM:version>4.11</HRM:version>
-      <HRM:scope>test</HRM:scope>
-    </HRM:dependency>
-  </HRM:dependencies>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.2</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.9</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.2</version>
+    </dependency>
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+      <version>1.2.0</version>
+    </dependency>
 
-  <HRM:build>
-    <HRM:finalName>HumanResourceManagement</HRM:finalName>
-    <HRM:pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <HRM:plugins>
-        <HRM:plugin>
-          <HRM:artifactId>maven-clean-plugin</HRM:artifactId>
-          <HRM:version>3.1.0</HRM:version>
-        </HRM:plugin>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>3.5.3</version>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+      </dependency>
+
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.*</include>
+        </includes>
+      </resource>
+    </resources>
+    <finalName>HumanResourceManagement</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
         <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-        <HRM:plugin>
-          <HRM:artifactId>maven-resources-plugin</HRM:artifactId>
-          <HRM:version>3.0.2</HRM:version>
-        </HRM:plugin>
-        <HRM:plugin>
-          <HRM:artifactId>maven-compiler-plugin</HRM:artifactId>
-          <HRM:version>3.8.0</HRM:version>
-        </HRM:plugin>
-        <HRM:plugin>
-          <HRM:artifactId>maven-surefire-plugin</HRM:artifactId>
-          <HRM:version>2.22.1</HRM:version>
-        </HRM:plugin>
-        <HRM:plugin>
-          <HRM:artifactId>maven-war-plugin</HRM:artifactId>
-          <HRM:version>3.2.2</HRM:version>
-        </HRM:plugin>
-        <HRM:plugin>
-          <HRM:artifactId>maven-install-plugin</HRM:artifactId>
-          <HRM:version>2.5.2</HRM:version>
-        </HRM:plugin>
-        <HRM:plugin>
-          <HRM:artifactId>maven-deploy-plugin</HRM:artifactId>
-          <HRM:version>2.8.2</HRM:version>
-        </HRM:plugin>
-      </HRM:plugins>
-    </HRM:pluginManagement>
-  </HRM:build>
-</HRM:project>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

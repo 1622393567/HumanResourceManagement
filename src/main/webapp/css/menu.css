@@ -1,0 +1,72 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.toptitle{
+    width: 100%;
+    height: 100px;
+    background: #03e9f4;
+    position: relative;
+
+}
+.content{
+    width: 1500px;
+    height: 600px;
+    background: blueviolet;
+    left: 300px;
+    top: 100px;
+    position: absolute;
+}
+.menu{
+    width: 325px;
+    height: 600px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    background: #3789d3;
+
+}
+.accordion,
+.accordion ul { /* 折叠菜单及其子菜单的通用样式 */
+    font-size: 14px;
+    font-weight: bold;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    border: 5px solid #343b42;
+}
+
+.accordion ul {
+    border: 0;
+}
+
+.accordion ul li { /* 子菜单的菜单项样式 */
+    line-height: 50px;
+    height: 50px;
+    color: #e6efee;
+    border-bottom: 1px solid #383b4c;
+    background-color: #282b3a;
+}
+
+.accordion li span { /* 折叠菜单的标题样式 */
+    line-height: 60px;
+    display: block;
+    height: 60px;
+    color: #e6efee;
+    border: 2px solid #343b42;
+    background-color: #3789d3;
+}
+
+.accordion li.selected span { /* 折叠菜单选中项的标题样式 */
+    color: #e6efee;
+    background-color: #393c4b;
+}
+
+.accordion li div { /* 子菜单平时不显示 */
+    display: none;
+}
+
+.accordion li.selected div { /* 添加了selected样式时才显示 */
+    display: block;
+}

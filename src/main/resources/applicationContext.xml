@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+<!-- 6月30号的内容，自己看
+   类与类之间的依赖
+   例子：
+   <bean id="AccountController" class="cn.edu.guet.controller.AccountController">
+		<property name="accountService" ref="accountService"></property>
+	</bean>
+	<bean id="accountService" class="cn.edu.guet.bll.impl.AccountServiceImpl"></bean>
+	<bean id="TreeController" class="cn.edu.guet.controller.TreeController">
+		<property name="treeDao" ref="treeDao"></property>
+	</bean>
+	<bean id="treeDao" class="cn.edu.guet.dao.impl.TreeDaoImpl"></bean>-->
+    <bean id="UserController" class="com.lanqiao.controller.UserController">
+        <!--这里的name属性应该和Controller里的需要绑定的类的名字相同
+        -->
+        <property name="accountService" ref="accountService"></property>
+    </bean>
+    <bean id="PowerController" class="com.lanqiao.controller.PowerController">
+        <!--这里的name属性应该和Controller里的需要绑定的类的名字相同
+        -->
+        <property name="powerService" ref="powerService"></property>
+    </bean>
+    <bean id="accountService" class="com.lanqiao.bll.impl.EmpAccountServiceImpl"></bean>
+    <bean id="powerService" class="com.lanqiao.bll.impl.EmpPowerServiceImpl"></bean>
+</beans>
